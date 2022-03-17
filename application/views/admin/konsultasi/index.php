@@ -62,9 +62,16 @@
                           </td>
 
                           <td align="center">
-                            <a data-toggle="tooltip" title="Lihat Data Rincian Pemohon <?= $data->nama_pemohon;?>" href="<?= site_url('admin/Konsultasi/rincian');?>/<?= $data->id_konsultasi;?>">
-                              <button class="btn btn-sm btn-info btn-block <?= $data->status=='0'?'disabled':'';?>">Lihat</button>
-                            </a>
+                            <?php if ($data->status=="0") { ?>
+                              <a data-toggle="tooltip" title="Lihat Data Rincian Pemohon <?= $data->nama_pemohon;?>" href="javascript:void(0)">
+                                <button class="btn btn-sm btn-info btn-block">Lihat</button>
+                              </a>
+                            <?php  } else { ?>
+                              <a data-toggle="tooltip" title="Lihat Data Rincian Pemohon <?= $data->nama_pemohon;?>" href="<?= site_url('admin/Konsultasi/rincian');?>/<?= $data->id_konsultasi;?>">
+                                <button class="btn btn-sm btn-info btn-block">Lihat</button>
+                              </a>
+                            <?php  } ?>
+                            
                           </td>
                         </tr>
                         <?php $no++; endforeach;?>
