@@ -1,7 +1,7 @@
 <?php
 defined('BASEPATH') OR exit('No direct script access allowed');
 
-$config['base_url'] = 'http://'.$_SERVER['SERVER_NAME'].'/pnc/';
+$config['base_url'] = 'http://'.$_SERVER['SERVER_NAME'].'/pnc2/';
 $config['index_page'] = '';
 $config['uri_protocol']	= 'REQUEST_URI';
 $config['url_suffix'] = '';
