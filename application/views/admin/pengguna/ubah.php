@@ -20,7 +20,7 @@
             </div>
             <!-- /.box-header -->
             <!-- form start -->
-            <form class="form-horizontal" role="form" action="<?= site_url('admin/pengguna/update_proses');?>" method="post" enctype="multipart/form-data">
+            <form class="form-horizontal" role="form" action="<?= site_url('admin/Pengguna/update_proses');?>" method="post" enctype="multipart/form-data">
               <div class="box-body">
 
                 <div class="form-group">

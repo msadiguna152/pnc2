@@ -19,7 +19,7 @@ class Mpengguna extends CI_Model {
 		$data = array(
 			'nama_pengguna'=> $nama_pengguna,
 			'username'=> $username,
-			'password'=> $password,
+			'password'=> md5($password),
 			'level'=> $level,
 			'foto_pengguna'=> $foto_pengguna,
 
@@ -53,7 +53,7 @@ class Mpengguna extends CI_Model {
 		$data = array(
 			'nama_pengguna'=> $nama_pengguna,
 			'username'=> $username,
-			'password'=> $password,
+			'password'=> md5($password),
 			'level'=> $level,
 			'foto_pengguna'=> $foto_pengguna,
 		);

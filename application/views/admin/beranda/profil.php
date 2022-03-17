@@ -46,7 +46,7 @@ endforeach;
               <h3 class="box-title">AKUN</h3>
             </div>
             <div class="box-body">
-              <form role="form" onsubmit="return formValidasi()" enctype="multipart/form-data" action="<?= site_url('admin/beranda/ubah_proses');?>" method="post">
+              <form role="form" onsubmit="return formValidasi()" enctype="multipart/form-data" action="<?= site_url('admin/Beranda/ubah_proses');?>" method="post">
                 <div class="row">
                   <div class="col-lg-12">
                     <div class="form-group row">

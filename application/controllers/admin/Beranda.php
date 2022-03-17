@@ -5,10 +5,10 @@ public function __construct() {
 		parent::__construct();
 		$this->session->set_userdata('menu', 'Beranda');
 		$this->session->set_userdata('submenu', 'Beranda');
-		$this->load->model('admin/mberanda');
+		$this->load->model('admin/Mberanda');
 
 		if($this->session->userdata('level') != "Admin"){
-			echo '<script language="javascript">alert("Tidak Dapat Diakses!"); document.location="'.site_url('login').'"</script>';
+			echo '<script language="javascript">alert("Tidak Dapat Diakses!"); document.location="'.site_url('Login').'"</script>';
 		}
 	}
 	public function index()
@@ -29,7 +29,7 @@ public function __construct() {
 	public function profil()
 	{
 		$id = $this->session->userdata('id_pengguna');
-		$data['pengguna'] = $this->mberanda->get_edit($id);
+		$data['pengguna'] = $this->Mberanda->get_edit($id);
 		$this->load->view('admin/tema/head');
 		$this->load->view('admin/tema/menu');
 		$this->load->view('admin/beranda/profil',$data);
@@ -37,8 +37,8 @@ public function __construct() {
 	}
 	public function ubah_proses()
 	{
-		$this->mberanda->update();
-		echo '<script language="javascript">alert("Data Berhasil Di Simpan!"); document.location="'.site_url('admin/beranda/profil').'"';
+		$this->Mberanda->update();
+		echo '<script language="javascript">alert("Data Berhasil Di Simpan!"); document.location="'.site_url('admin/Beranda/profil').'"';
 		echo '</script>';
 	}
 }

@@ -19,7 +19,7 @@
             </div>
             <div class="box-body">
               <div class="col-12">
-                <form target="_BLANK" enctype="multipart/form-data" action="<?= site_url('admin/laporan/cetak_lap_konsultasi')?>" method="post">
+                <form target="_BLANK" enctype="multipart/form-data" action="<?= site_url('admin/Laporan/cetak_lap_konsultasi')?>" method="post">
 
                   <div class="form-group row">
                     <label for="status" class="col-sm-3 col-form-label">Status Konfirmasi</label>

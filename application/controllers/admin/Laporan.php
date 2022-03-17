@@ -3,12 +3,12 @@
 class Laporan extends CI_Controller {
 public function __construct() {
 		parent::__construct();
-		$this->load->model('admin/mlaporan');
+		$this->load->model('admin/Mlaporan');
 		$this->session->set_userdata('menu', 'Cetak Laporan');
 
 
 		if($this->session->userdata('level') != "Admin"){
-			echo '<script language="javascript">alert("Tidak Dapat Diakses!"); document.location="'.site_url('login').'"</script>';
+			echo '<script language="javascript">alert("Tidak Dapat Diakses!"); document.location="'.site_url('Login').'"</script>';
 		}
 	}
 	public function hal_konsultasi()
@@ -24,7 +24,7 @@ public function __construct() {
 	public function cetak_lap_konsultasi()
 	{
 		$data = array();
-		$data['laporan'] = $this->mlaporan->get_data_konsultasi();
+		$data['laporan'] = $this->Mlaporan->get_data_konsultasi();
 		$this->load->view('admin/laporan/cetak_lap_konsultasi',$data);
 
 		$html = $this->output->get_output();

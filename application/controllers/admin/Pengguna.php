@@ -4,13 +4,13 @@ class Pengguna extends CI_Controller {
 	public function __construct(){
 		parent::__construct();
 		$this->session->set_userdata('menu', 'Pengguna');
-		$this->load->model('admin/mpengguna');
+		$this->load->model('admin/Mpengguna');
 		if($this->session->userdata('level') != "Admin"){
-			echo '<script language="javascript">alert("Tidak Dapat Diakses!"); document.location="'.site_url('login').'"</script>';
+			echo '<script language="javascript">alert("Tidak Dapat Diakses!"); document.location="'.site_url('Login').'"</script>';
 		}
 	}
 	public function index(){
-		$data['pengguna'] = $this->mpengguna->get();
+		$data['pengguna'] = $this->Mpengguna->get();
 		$this->load->view('admin/tema/head');
 		$this->load->view('admin/tema/menu');
 		$this->load->view('admin/pengguna/index',$data);
@@ -23,25 +23,25 @@ class Pengguna extends CI_Controller {
 		$this->load->view('admin/tema/footer');
 	}
 	public function insert_proses(){
-		$this->mpengguna->insert();
-		echo '<script language="javascript">alert("Berhasil Di Simpan!"); document.location="'.site_url('admin/pengguna').'"';
+		$this->Mpengguna->insert();
+		echo '<script language="javascript">alert("Berhasil Di Simpan!"); document.location="'.site_url('admin/Pengguna').'"';
 		echo '</script>';
 	}
 	public function update($id){
-		$data['data'] = $this->mpengguna->get_edit($id);
+		$data['data'] = $this->Mpengguna->get_edit($id);
 		$this->load->view('admin/tema/head');
 		$this->load->view('admin/tema/menu');
 		$this->load->view('admin/pengguna/ubah',$data);
 		$this->load->view('admin/tema/footer');
 	}
 	public function update_proses(){
-		$this->mpengguna->update();
-		echo '<script language="javascript">alert("Berhasil Di Ubah!"); document.location="'.site_url('admin/pengguna').'"';
+		$this->Mpengguna->update();
+		echo '<script language="javascript">alert("Berhasil Di Ubah!"); document.location="'.site_url('admin/Pengguna').'"';
 		echo '</script>';
 	}
 	public function delete($id){
-		$this->mpengguna->delete($id);
-		echo '<script language="javascript">alert("Berhasil Di Hapus!"); document.location="'.site_url('admin/pengguna').'"';
+		$this->Mpengguna->delete($id);
+		echo '<script language="javascript">alert("Berhasil Di Hapus!"); document.location="'.site_url('admin/Pengguna').'"';
 		echo '</script>';
 	}
 }

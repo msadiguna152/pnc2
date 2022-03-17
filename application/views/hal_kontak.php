@@ -13,6 +13,7 @@
 
   <!-- Custom fonts for this template-->
   <link href="<?= base_url()?>assets2/vendor/fontawesome-free/css/all.min.css" rel="stylesheet" type="text/css">
+  <link rel="stylesheet" href="<?= base_url()?>assets2/icon/css/font-awesome.min.css">
   <link href="https://fonts.googleapis.com/css?family=Nunito:200,200i,300,300i,400,400i,600,600i,700,700i,800,800i,900,900i" rel="stylesheet">
   <script src="http://code.jquery.com/jquery-2.2.1.min.js"></script>
 
@@ -169,59 +170,52 @@
                   <div class="text-center">
                     <div class="row">
                       <div class="col-xl-12 col-md-12 mt-3">
+
                           <div class="form-group">
-                            <a href="#" class="btn btn-primary btn-icon-split">
-                              <span class="icon text-white-50">
-                                Youtube
+                            <a target="_BLANK" href="https://api.whatsapp.com/send/?phone=6281282723344&text&app_absent=0" class="btn btn-outline-info btn-icon-split">
+                              <span class="icon text-white">
+                                <i class="fa fa-whatsapp" aria-hidden="true"></i>
                               </span>
-                              <span class="text">Split Button Primary</span>
+                              <span class="text">Whatsapp</span>
                             </a>
                           </div>
 
                           <div class="form-group">
-                            <a href="#" class="btn btn-primary btn-icon-split">
-                              <span class="icon text-white-50">
-                                Whatapps
+                            <a target="_BLANK" href="https://www.facebook.com/pengadilannegeri.cikarang.3" class="btn btn-outline-info btn-icon-split">
+                              <span class="icon text-white">
+                                <i class="fa fa-facebook-official" aria-hidden="true"></i>
                               </span>
-                              <span class="text">Split Button Primary</span>
+                              <span class="text">Facebook</span>
                             </a>
                           </div>
 
                           <div class="form-group">
-                            <a href="#" class="btn btn-primary btn-icon-split">
-                              <span class="icon text-white-50">
-                                Instagram
+                            <a target="_BLANK"  href="https://twitter.com/pn_cikarang" class="btn btn-outline-info btn-icon-split">
+                              <span class="icon text-white">
+                                <i class="fa fa-twitter-square" aria-hidden="true"></i>
                               </span>
-                              <span class="text">Split Button Primary</span>
+                              <span class="text">Twitter</span>
                             </a>
                           </div>
 
                           <div class="form-group">
-                            <a href="#" class="btn btn-primary btn-icon-split">
-                              <span class="icon text-white-50">
-                                Facebook
+                            <a target="_BLANK"  href="https://www.youtube.com/channel/UCsZ7LhcmQOn5CXWRZY6y-WQ" class="btn btn-outline-info btn-icon-split">
+                              <span class="icon text-white">
+                                <i class="fa fa-youtube-play" aria-hidden="true"></i>
                               </span>
-                              <span class="text">Split Button Primary</span>
+                              <span class="text">Youtube</span>
                             </a>
                           </div>
 
                           <div class="form-group">
-                            <a href="#" class="btn btn-primary btn-icon-split">
-                              <span class="icon text-white-50">
-                                Telpon
+                            <a target="_BLANK"  href="https://www.instagram.com/pn_cikarang/" class="btn btn-outline-info btn-icon-split">
+                              <span class="icon text-white">
+                                <i class="fa fa-instagram" aria-hidden="true"></i>
                               </span>
-                              <span class="text">Split Button Primary</span>
+                              <span class="text">Instagram</span>
                             </a>
                           </div>
 
-                          <div class="form-group">
-                            <a href="#" class="btn btn-primary btn-icon-split">
-                              <span class="icon text-white-50">
-                                E-mail
-                              </span>
-                              <span class="text">Split Button Primary</span>
-                            </a>
-                          </div>
 
                       </div>
                     </div>

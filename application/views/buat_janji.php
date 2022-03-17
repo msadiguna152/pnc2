@@ -169,13 +169,13 @@
                   <div class="text-center">
                     <div class="row">
                       <div class="col-xl-12 col-md-12 mt-3">
-                        <form class="user" action="<?= site_url('login/insert_janji')?>" method="post">
+                        <form class="user" action="<?= site_url('Login/insert_janji')?>" method="post">
                           <div class="form-group">
                             <input type="text" class="form-control" name="nama_pemohon" required placeholder="Masukan Nama Lengkap">
                           </div>
 
                           <div class="form-group">
-                            <input type="number" class="form-control" name="no_pemohon" required placeholder="Masukan Nomor Whatapps">
+                            <input type="text" onkeypress="return hanyaAngka2(event)" class="form-control" name="no_pemohon" required placeholder="Masukan Nomor Whatapps">
                           </div>
 
                           <div class="form-group">
@@ -223,6 +223,17 @@
 
   <!-- Custom scripts for all pages-->
   <script src="<?= base_url()?>assets2/js/sb-admin-2.min.js"></script>
+
+  <script type="text/javascript">
+  function hanyaAngka2(evt) {
+    var charCode = (evt.which) ? evt.which : event.keyCode
+    if (charCode > 31 && (charCode < 48 || charCode > 57)){
+      return false;
+    }else {
+      return true;
+    }
+  }
+</script>
 
 </body>
 

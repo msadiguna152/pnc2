@@ -22,7 +22,7 @@
 
         <div class="box-header with-border">
           <h3 class="box-title">
-            <a href="<?= site_url('admin/pengguna/insert')?>" class="btn btn-flat btn-primary btn-sm">Tambah Data</a>
+            <a href="<?= site_url('admin/Pengguna/insert')?>" class="btn btn-flat btn-primary btn-sm">Tambah Data</a>
           </h3>
         </div>
         <!-- /.box-header -->
@@ -50,10 +50,10 @@
                     <img width="100px" height="120px" class="img img-fluid img-thumbnail" src="<?= site_url();?>profil/<?= $data->foto_pengguna;?>">
                   </td>
                   <td align="center">
-                    <a class="btn btn-sm btn-primary btn-block" href="<?= site_url('admin/pengguna/update');?>/<?= $data->id_pengguna;?>">
+                    <a class="btn btn-sm btn-primary btn-block" href="<?= site_url('admin/Pengguna/update');?>/<?= $data->id_pengguna;?>">
                       Ubah
                     </a>
-                    <a class="btn btn-sm btn-danger btn-block" onclick="return confirm('Hapus Data?')" href="<?= site_url('admin/pengguna/delete');?>/<?= $data->id_pengguna;?>">
+                    <a class="btn btn-sm btn-danger btn-block" onclick="return confirm('Hapus Data?')" href="<?= site_url('admin/Pengguna/delete');?>/<?= $data->id_pengguna;?>">
                       Hapus
                     </a>
                   </td>

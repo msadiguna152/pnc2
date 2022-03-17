@@ -62,7 +62,7 @@
                           </td>
 
                           <td align="center">
-                            <a data-toggle="tooltip" title="Lihat Data Rincian Pemohon <?= $data->nama_pemohon;?>" href="<?= site_url('admin/konsultasi/rincian');?>/<?= $data->id_konsultasi;?>">
+                            <a data-toggle="tooltip" title="Lihat Data Rincian Pemohon <?= $data->nama_pemohon;?>" href="<?= site_url('admin/Konsultasi/rincian');?>/<?= $data->id_konsultasi;?>">
                               <button class="btn btn-sm btn-info btn-block <?= $data->status=='0'?'disabled':'';?>">Lihat</button>
                             </a>
                           </td>
