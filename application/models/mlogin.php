@@ -19,7 +19,9 @@ class Mlogin extends CI_Model{
 			elseif(substr(trim($nohp), 0, 1)=='0'){
 				$hp = '+62'.substr(trim($nohp), 1);
 			}
-		};
+		} else {
+			$hp = $nohp;
+		}
 
 
 		$data = array(

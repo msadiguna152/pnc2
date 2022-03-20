@@ -23,61 +23,61 @@
             </div>
             <div class="box-body">
               <div class="table-responsive">
-                    <table id="example2" width="100%" class="table table-bordered table-hover">
-                      <thead align="center">
-                        <tr>
-                          <th>No</th>
-                          <th>Waktu Dibuat</th>
-                          <th>Nama Pemohon</th>
-                          <th>Nomor Whatapps</th>
-                          <th>Status</th>
-                          <th>Konfirmasi</th>
-                          <th>Rincian</th>
-                        </tr>
-                      </thead>
-                      <tbody style="text-align: left; vertical-align: top;">
-                        <?php $no=1; foreach ($konsultasi->result() as $data) : ?>
-                        <tr>
-                          <td style="text-align: center; vertical-align: middle;"><?= $no;?></td>
-                          <td><?= format_indo($data->waktu_pengajuan);?></td>
-                          <td><?= $data->nama_pemohon;?></td>
-                          <td><?= $data->no_pemohon;?></td>
-                          <td>
-                            <?php
-                              if ($data->status!="0") {
-                                if ($data->status=="Diterima") {
-                                  echo '<span class="label label-success">'.$data->status.'</span>';
-                                } else {
-                                  echo '<span class="label label-danger">'.$data->status.'</span>';
-                                }
-                              } else if ($data->status=="0"){
-                                echo '<span class="label label-warning">Menunggu Konfirmasi</span>';
-                              }
-                            ?>
-                          </td>
-                          <td align="center">
-                            <a ata-toggle="tooltip" title="Kirim Konfirmasi Pemohon <?= $data->nama_pemohon;?>" href="<?= site_url('admin/Konsultasi/ubah');?>/<?= $data->id_konsultasi;?>">
-                              <button class="btn btn-sm btn-primary btn-block">Konfirmasi</button>
-                            </a>
-                          </td>
+                <table id="example2" width="100%" class="table table-bordered table-hover">
+                  <thead align="center">
+                    <tr>
+                      <th>No</th>
+                      <th>Waktu Pengajuan</th>
+                      <th>Nama Pemohon</th>
+                      <th>Nomor Whatapps</th>
+                      <th>Status</th>
+                      <th>Konfirmasi</th>
+                      <th>Rincian</th>
+                    </tr>
+                  </thead>
+                  <tbody style="text-align: left; vertical-align: top;">
+                    <?php $no=1; foreach ($konsultasi->result() as $data) : ?>
+                    <tr>
+                      <td style="text-align: center; vertical-align: middle;"><?= $no;?></td>
+                      <td><?= format_indo($data->waktu_pengajuan);?></td>
+                      <td><?= $data->nama_pemohon;?></td>
+                      <td><?= $data->no_pemohon;?></td>
+                      <td>
+                        <?php
+                        if ($data->status!="0") {
+                          if ($data->status=="Diterima") {
+                            echo '<span class="label label-success">'.$data->status.'</span>';
+                          } else {
+                            echo '<span class="label label-danger">'.$data->status.'</span>';
+                          }
+                        } else if ($data->status=="0"){
+                          echo '<span class="label label-warning">Menunggu Konfirmasi</span>';
+                        }
+                        ?>
+                      </td>
+                      <td align="center">
+                        <a ata-toggle="tooltip" title="Kirim Konfirmasi Pemohon <?= $data->nama_pemohon;?>" href="<?= site_url('admin/Konsultasi/ubah');?>/<?= $data->id_konsultasi;?>">
+                          <button class="btn btn-sm btn-primary btn-block">Konfirmasi</button>
+                        </a>
+                      </td>
 
-                          <td align="center">
-                            <?php if ($data->status=="0") { ?>
-                              <a data-toggle="tooltip" title="Lihat Data Rincian Pemohon <?= $data->nama_pemohon;?>" href="javascript:void(0)">
-                                <button class="btn btn-sm btn-info btn-block">Lihat</button>
-                              </a>
-                            <?php  } else { ?>
-                              <a data-toggle="tooltip" title="Lihat Data Rincian Pemohon <?= $data->nama_pemohon;?>" href="<?= site_url('admin/Konsultasi/rincian');?>/<?= $data->id_konsultasi;?>">
-                                <button class="btn btn-sm btn-info btn-block">Lihat</button>
-                              </a>
-                            <?php  } ?>
-                            
-                          </td>
-                        </tr>
-                        <?php $no++; endforeach;?>
-                      </tbody>
-                    </table>
-                  </div>
+                      <td align="center">
+                        <?php if ($data->status=="0") { ?>
+                          <a data-toggle="tooltip" title="Lihat Data Rincian Pemohon <?= $data->nama_pemohon;?>" href="javascript:void(0)">
+                            <button class="btn btn-sm btn-info btn-block">Lihat</button>
+                          </a>
+                        <?php  } else { ?>
+                          <a data-toggle="tooltip" title="Lihat Data Rincian Pemohon <?= $data->nama_pemohon;?>" href="<?= site_url('admin/Konsultasi/rincian');?>/<?= $data->id_konsultasi;?>">
+                            <button class="btn btn-sm btn-info btn-block">Lihat</button>
+                          </a>
+                        <?php  } ?>
+                        
+                      </td>
+                    </tr>
+                    <?php $no++; endforeach;?>
+                  </tbody>
+                </table>
+              </div>
 
             </div>
             <!-- /.box-body -->

@@ -9,22 +9,30 @@ class Login extends CI_Controller {
 
 	public function index() {
 		$this->session->sess_destroy();
+		$this->load->view('head');
 		$this->load->view('hal_awal');
+		$this->load->view('foot');
 	}
 
 	public function login() {
 		$this->session->sess_destroy();
+		$this->load->view('head');
 		$this->load->view('hal_login');
+		$this->load->view('foot');
 	}
 
 	public function buat_janji() {
 		$this->session->sess_destroy();
+		$this->load->view('head');
 		$this->load->view('buat_janji');
+		$this->load->view('foot');
 	}
 
 	public function kontak() {
 		$this->session->sess_destroy();
+		$this->load->view('head');
 		$this->load->view('hal_kontak');
+		$this->load->view('foot');
 	}
 
 	public function insert_janji(){

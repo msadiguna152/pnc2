@@ -29,11 +29,16 @@
   <p><center><img height="100px" src="<?= site_url('assets/kop1.png');?>"></center></p>
   <hr>
   <p><center><b style="font-size: 20px;">LAPORAN DATA KONSULTASI</b></center></p><br>
+  <?php
+  $dari = $this->input->post('dari');
+  $sampai = $this->input->post('sampai');
+  echo '<p style="font-size: 20px;font-style: bold;">Tanggal : '.format_indo($dari).' s/d '.format_indo($sampai).'</p>';
+  ?>
   <table cellpadding="5px" cellspacing="0px" border="1">
     <thead>
       <tr align="center">
         <th>No</th>
-        <th>Waktu Dibuat</th>
+        <th>Waktu Pengajuan</th>
         <th>Nama Pemohon</th>
         <th>Nomor Whatapps</th>
         <th>Status</th>
@@ -53,7 +58,7 @@
     </tbody>
   </table>
   <br>
-  <table cellpadding="0px" cellspacing="0px" border="0">
+ <!--  <table cellpadding="0px" cellspacing="0px" border="0">
     <tr>
       <td width="850px"> </td>
       <td>Kandangan, <?= format_indo(date('Y-m-d')); ?></td>
@@ -75,6 +80,6 @@
       <td></td>
       <td>NIP. XXX</td>
     </tr>
-  </table>
+  </table> -->
 </body>
 </html>

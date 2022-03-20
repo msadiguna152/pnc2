@@ -21,11 +21,11 @@ public function __construct() {
 		$this->load->view('admin/tema/footer');
 	}
 
-	public function cetak_lap_konsultasi()
+	public function cetak_lap_pdf()
 	{
 		$data = array();
 		$data['laporan'] = $this->Mlaporan->get_data_konsultasi();
-		$this->load->view('admin/laporan/cetak_lap_konsultasi',$data);
+		$this->load->view('admin/laporan/cetak_lap_pdf',$data);
 
 		$html = $this->output->get_output();
 		$this->load->library('dompdf_gen');
@@ -35,5 +35,12 @@ public function __construct() {
 
 		$this->dompdf->render();
 		$this->dompdf->stream("Laporan Data Konsultasi.pdf", array("Attachment"=>0));
+	}
+
+	public function cetak_lap_excel()
+	{
+		$data = array();
+		$data['laporan'] = $this->Mlaporan->get_data_konsultasi();
+		$this->load->view('admin/laporan/cetak_lap_excel',$data);
 	}
 }

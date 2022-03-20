@@ -83,19 +83,45 @@
 
       <div class="row">
 
-        <div class="col-md-12">
+        <div class="col-md-12 col-xl-12">
           <div class="box box-primary">
             <div class="box-header">
-              <h3 class="box-title">Date picker</h3>
+              <h3 class="box-title">JADWAL KONSULTASI HARI INI</h3>
             </div>
             <div class="box-body">
+              <div class="table-responsive">
+                <table id="example2" width="100%" class="table table-bordered table-hover">
+                  <thead align="center">
+                    <tr>
+                      <th>No</th>
+                      <th>Waktu Pengajuan</th>
+                      <th>Nama Pemohon</th>
+                      <th>Tanggal</th>
+                      <th>Jam</th>
+                      <th>Link</th>
+                    </tr>
+                  </thead>
+                  <tbody style="text-align: left; vertical-align: top;">
+                    <?php $no=1; foreach ($sekarang->result() as $data) : ?>
+                    <tr>
+                      <td style="text-align: center; vertical-align: middle;"><?= $no;?></td>
+                      <td><?= format_indo($data->waktu_pengajuan);?></td>
+                      <td><?= $data->nama_pemohon;?></td>
+                      <td><?= format_indo($data->tanggal);?></td>
+                      <td><?= $data->jam;?></td>
+                      <td><a target="_BLANK" href="<?= $data->link_konsultasi;?>">Klik Link Konsultasi</a></td>
 
-
+                    </tr>
+                    <?php $no++; endforeach;?>
+                  </tbody>
+                </table>
+              </div>
             </div>
             <!-- /.box-body -->
           </div>
           <!-- /.box -->
         </div>
+
         <!-- /.col (right) -->
       </div>
       <!-- /.row -->

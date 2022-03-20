@@ -45,4 +45,24 @@ public function update()
 		}
 	}
 
+	public function get_hari_ini()
+	{
+		date_default_timezone_set("Asia/Makassar"); 
+		$tgl=date("Y-m-d");
+		$query = $this->db->select('*')->from('tbl_konsultasi')
+		->where('date(tanggal)',$tgl)
+		->order_by('tbl_konsultasi.id_konsultasi','DESC')->get();
+		return $query;
+	}
+
+	// public function get_terlewat()
+	// {
+	// 	date_default_timezone_set("Asia/Makassar"); 
+	// 	$tgl=date("Y-m-d");
+	// 	$query = $this->db->select('*')->from('tbl_konsultasi')
+	// 	->where('tbl_konsultasi.tanggal<=',$tgl)
+	// 	->where('tbl_konsultasi.id_konsultasi','DESC')->get();
+	// 	return $query;
+	// }
+
 }

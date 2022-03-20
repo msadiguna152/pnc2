@@ -1,108 +1,10 @@
-<!DOCTYPE html>
-<html lang="en">
-
-<head>
-
-  <meta charset="utf-8">
-  <meta http-equiv="X-UA-Compatible" content="IE=edge">
-  <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
-  <meta name="description" content="">
-  <meta name="author" content="">
-
-  <title>PINTU PTSP (Permintaan Informasi Tatap Muka Pelayanan Terpadu Satu Pintu) Pengadilan Negeri Cikarang</title>
-
-  <!-- Custom fonts for this template-->
-  <link href="<?= base_url()?>assets2/vendor/fontawesome-free/css/all.min.css" rel="stylesheet" type="text/css">
-  <link href="https://fonts.googleapis.com/css?family=Nunito:200,200i,300,300i,400,400i,600,600i,700,700i,800,800i,900,900i" rel="stylesheet">
-  <script src="http://code.jquery.com/jquery-2.2.1.min.js"></script>
-
-  <!-- Custom styles for this template-->
-  <link href="<?= base_url()?>assets2/css/sb-admin-2.min.css" rel="stylesheet">
-
-  <style type="text/css">
-    .preloader {
-      position: fixed;
-      top: 0;
-      left: 0;
-      width: 100%;
-      height: 100%;
-      z-index: 9999;
-      background-color: #fff;
-    }
-    .preloader .loading {
-      position: absolute;
-      left: 50%;
-      top: 50%;
-      transform: translate(-50%,-50%);
-      font: 14px arial;
-    }
-  </style>
-  <script>
-    $(document).ready(function(){
-      $(".preloader").fadeOut();
-    })
-  </script>
-
-  <style type="text/css">
-    .bg {
-      background: url(<?= site_url('assets/bg.jpeg');?>);
-      background-position: center;
-      background-repeat: no-repeat;
-      background-size: cover;
-    }
-    .codinglanPelangi {
-      background: linear-gradient(45deg, #f22666, #f89606, #26a60b, #5866ec, #f54e86, #f7ca16, #d2626f);
-      background-size: 500% 500%;
-      -webkit-animation: codinglanGradient 12s ease infinite;
-      -moz-animation: codinglanGradient 12s ease infinite;
-      animation: codinglanGradient 12s ease infinite;
-    }
-    @-webkit-keyframes codinglanGradient {
-      0%{background-position:0% 50%}
-      50%{background-position:100% 50%}
-      100%{background-position:0% 50%}
-    }
-    @-moz-keyframes codinglanGradient {
-      0%{background-position:0% 50%}
-      50%{background-position:100% 50%}
-      100%{background-position:0% 50%}
-    }
-    @keyframes codinglanGradient {
-      0%{background-position:0% 50%}
-      50%{background-position:100% 50%}
-      100%{background-position:0% 50%}
-    }.codinglanPelangi {
-      background: linear-gradient(45deg, #f22613, #f89406, #26a65b, #5868ec, #f54e80, #f7ca18, #d2527f);
-      background-size: 500% 500%;
-      -webkit-animation: codinglanGradient 12s ease infinite;
-      -moz-animation: codinglanGradient 12s ease infinite;
-      animation: codinglanGradient 12s ease infinite;
-    }
-    @-webkit-keyframes codinglanGradient {
-      0%{background-position:0% 50%}
-      50%{background-position:100% 50%}
-      100%{background-position:0% 50%}
-    }
-    @-moz-keyframes codinglanGradient {
-      0%{background-position:0% 50%}
-      50%{background-position:100% 50%}
-      100%{background-position:0% 50%}
-    }
-    @keyframes codinglanGradient {
-      0%{background-position:0% 50%}
-      50%{background-position:100% 50%}
-      100%{background-position:0% 50%}
-    </style>
-
-</head>
-
-<body class="codinglanPelangi ">
-  <!-- <div class="preloader">
+<body class="bg">
+  <div class="preloader">
     <div class="loading">
       <img src="<?= base_url()?>assets2/loading.gif" width="80">
       <p>Harap Tunggu</p>
     </div>
-  </div> -->
+  </div>
 
   <div class="container">
 
@@ -218,79 +120,75 @@
                         </div>
                         </a>
                       </div>
-
                     </div>
                   </div>
                   <hr>
                   <div class="row text-center">
                     <div class="col-12 mt-3">
-                      <h1 class="h4 text-gray-900 mb-4"><b><?= strtoupper('Aplikasi Pencari Keadilan');?></b></h1>
+                      <h1 class="h4 text-gray-900 mb-4"><b><?= strtoupper('APLIKASI PENGAWASAN');?></b></h1>
                     </div>
                   </div>
                   <div class="text-center">
                     <div class="row">
-                      <div class="col-xl-6 col-md-12 mt-3">
-                        <a class="text" style="text-decoration: none;" target="_BLANK" href="https://ecourt.mahkamahagung.go.id/">
+                      <div class="col-xl-3 col-md-12 mt-3">
+                        <a class="text" style="text-decoration: none;" target="_BLANK" href="https://ecourt.mahkamahagung.go.id/"  title="Klik Untuk Kehalaman E-COURT">
 
-                          <div class="card bg-warning text-white shadow h-100 py-2">
+                          <div class="card btn-outline-success shadow h-100 py-2">
                             <div class="card-body">
-                              <div class="row no-gutters align-items-center">
-                                <div class="col mr-2">
-                                  <div class="h5 mb-0 font-weight-bold">E-COURT</div>
-                                </div>
-                                <div class="col-auto">
-                                </div>
+                              <div class="col-auto">
+                                <img class="img img-fluid" src="<?= base_url()?>icon/button_e-court.png">
                               </div>
                             </div>
                           </div>
                         </a>
                       </div>
 
-                      <div class="col-xl-6 col-md-12 mt-3">
+                      <div class="col-xl-3 col-md-12 mt-3" title="Klik Untuk Kehalaman SIWAS">
                         <a class="text" target="_BLANK" style="text-decoration: none;" href="https://siwas.mahkamahagung.go.id/">
 
-                          <div class="card bg-warning text-white shadow h-100 py-2">
+                          <div class="card btn-outline-success shadow h-100 py-2">
                             <div class="card-body">
-                              <div class="row no-gutters align-items-center">
-                                <div class="col mr-2">
-                                  <div class="h5 mb-0 font-weight-bold">SIWAS</div>
-                                </div>
-                                <div class="col-auto">
-                                </div>
+                              <div class="col-auto">
+                                <img class="img img-fluid" src="<?= base_url()?>icon/button_siwas.png">
                               </div>
                             </div>
                           </div>
                         </a>
                       </div>
 
-                      <div class="col-xl-6 col-md-12 mt-3">
-                        <a class="text" target="_BLANK" style="text-decoration: none;" href="https://eraterang.badilum.mahkamahagung.go.id/masuk">
+                      <div class="col-xl-3 col-md-12 mt-3">
+                        <a class="text" target="_BLANK" style="text-decoration: none;" href="https://eraterang.badilum.mahkamahagung.go.id/masuk"  title="Klik Untuk Kehalaman ERATERANG">
 
-                          <div class="card bg-warning text-white shadow h-100 py-2">
+                          <div class="card btn-outline-success shadow h-100 py-2">
                             <div class="card-body">
-                              <div class="row no-gutters align-items-center">
-                                <div class="col mr-2">
-                                  <div class="h5 mb-0 font-weight-bold">ERATERANG</div>
-                                </div>
-                                <div class="col-auto">
-                                </div>
+                              <div class="col-auto">
+                                <img class="img img-fluid" src="<?= base_url()?>icon/button_eraterang.png">
                               </div>
                             </div>
                           </div>
                         </a>
                       </div>
 
-                      <div class="col-xl-6 col-md-12 mt-3">
-                        <a class="text" target="_BLANK" style="text-decoration: none;" href="http://esurvey.badilum.mahkamahagung.go.id/index.php/kontrol_dashboard">
+                      <div class="col-xl-3 col-md-12 mt-3">
+                        <a class="text" target="_BLANK" style="text-decoration: none;" href="http://esurvey.badilum.mahkamahagung.go.id/index.php/kontrol_dashboard" title="Klik Untuk Kehalaman SISUPER">
 
-                          <div class="card bg-warning text-white shadow h-100 py-2">
+                          <div class="card btn-outline-success shadow h-100 py-2">
                             <div class="card-body">
-                              <div class="row no-gutters align-items-center">
-                                <div class="col mr-2">
-                                  <div class="h5 mb-0 font-weight-bold">SISUPER</div>
-                                </div>
-                                <div class="col-auto">
-                                </div>
+                              <div class="col-auto">
+                                <img class="img img-fluid" src="<?= base_url()?>icon/button_sisuper.png">
+                              </div>
+                            </div>
+                          </div>
+                        </a>
+                      </div>
+
+                      <div class="col-xl-3 col-md-12 mt-3">
+                        <a class="text" target="_BLANK" style="text-decoration: none;" href="https://www.lapor.go.id/" title="Klik Untuk Kehalaman E-LAPOR">
+
+                          <div class="card btn-outline-success shadow h-100 py-2">
+                            <div class="card-body">
+                              <div class="col-auto">
+                                <img class="img img-fluid" src="<?= base_url()?>icon/button_sisuper.png">
                               </div>
                             </div>
                           </div>
@@ -303,28 +201,4 @@
               </div>
             </div>
           </div>
-          <div class="card-footer">
-            <div class="text-center">
-              <span class="text text-primary text-muted"><b>Pengadilan Negeri Cikarang</b></span>
-            </div>
-          </div>
-        </div>
-      </div>
-
-    </div>
-
-  </div>
-
-  <!-- Bootstrap core JavaScript-->
-  <script src="<?= base_url()?>assets2/vendor/jquery/jquery.min.js"></script>
-  <script src="<?= base_url()?>assets2/vendor/bootstrap/js/bootstrap.bundle.min.js"></script>
-
-  <!-- Core plugin JavaScript-->
-  <script src="<?= base_url()?>assets2/vendor/jquery-easing/jquery.easing.min.js"></script>
-
-  <!-- Custom scripts for all pages-->
-  <script src="<?= base_url()?>assets2/js/sb-admin-2.min.js"></script>
-
-</body>
-
-</html>
+          

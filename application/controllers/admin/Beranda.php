@@ -13,9 +13,11 @@ public function __construct() {
 	}
 	public function index()
 	{
+		$data['sekarang'] = $this->Mberanda->get_hari_ini();
+
 		$this->load->view('admin/tema/head');
 		$this->load->view('admin/tema/menu');
-		$this->load->view('admin/beranda/index');
+		$this->load->view('admin/beranda/index',$data);
 		$this->load->view('admin/tema/footer');
 	}
 
